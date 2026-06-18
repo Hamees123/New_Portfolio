@@ -1,65 +1,62 @@
 import Image from "next/image";
 
-export default function Home() {
+import { Home, Search, Settings } from "lucide-react"
+
+import { Dock, DockIcon } from "@/components/ui/dock"
+import { DockDemo } from "@/components/ui/dock-demo-2";
+import Header from "@/components/Header";
+import { CardContainer } from "@/components/ui/3d-card";
+import ThreeDCardDemo from "@/components/3d-card-demo";
+import WorkExperience from "@/components/Work_experience";
+import DemoOne from "@/components/Work_experience";
+import WorkExperienceDemo from "@/components/Work_experience";
+import PointerHighlightDemo from "@/components/pointer-highlight-demo-2";
+import ContactSection from "@/components/contact";
+import {projectinfo} from "@/data/projectinfo";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
+
+export default function My_Home() {
+  
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+
+
+    <div className="">
+      
+
+
+
+       <Header />
+       <WorkExperienceDemo/>
+
+
+
+
+
+<div className="w-full max-w-5xl mx-auto text-left px-4 sm:px-6 mb-10">
+        {/* The Heading with your Highlight Component */}
+        <h1 className="text-4xl font-extrabold tracking-tighter text-slate-900 dark:text-white sm:text-5xl">
+          <PointerHighlight
+            rectangleClassName="bg-[#A5E9DD] dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600"
+            pointerClassName="text-black-500"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+            <span className="relative z-10">My Projects</span>
+          </PointerHighlight>
+        </h1>
+
+        {/* The Aligned Description */}
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-500 dark:text-zinc-400 sm:text-lg">
+          A curated collection of web applications, and digital solutions 
+          built with modern web technologies and robust architectures.
+        </p>
+      </div>
+
+<ThreeDCardDemo projects={projectinfo}/>
+            <DockDemo />
+
+            <ContactSection/>
+
+
     </div>
   );
 }
