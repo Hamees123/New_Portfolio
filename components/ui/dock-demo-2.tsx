@@ -19,7 +19,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>
 
 export function DockDemo() {
   return (
-<div className="relative overflow-x-scroll">    
+<div className="relative overflow-x-scroll md:overflow-hidden">    
     <h2 className="w-full max-w-5xl mx-auto text-left  px-4 sm:px-6 text-4xl font-bold tracking-tighter text-slate-900">
     <PointerHighlight
           rectangleClassName="bg-[#A5E9DD]  dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600"
