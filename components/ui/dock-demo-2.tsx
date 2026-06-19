@@ -102,8 +102,8 @@ export function DockDemo() {
             className="grid items-start gap-y-2 border-b border-gray-100 dark:border-zinc-800/80 py-5 last:border-none grid-cols-1 sm:grid-cols-[160px_1fr]"
           >
             {/* Left Side Section Categorization Label Block */}
-            <div className="pl-2 text-sm font-medium text-gray-400 dark:text-zinc-500 flex items-center h-7">
-              <span className="mr-2 font-mono text-xs text-gray-300 dark:text-zinc-700 select-none" aria-hidden="true">
+            <div className="pl-2 text-sm font-medium text-gray-800 dark:text-zinc-500 flex items-center h-7">
+              <span className="mr-2 font-mono text-xs text-gray-500 dark:text-zinc-700 select-none" aria-hidden="true">
                 {category.index}
               </span>
               {category.title}
